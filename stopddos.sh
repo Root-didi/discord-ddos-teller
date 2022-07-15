@@ -40,21 +40,26 @@ while /bin/true; do
             "icon_url": "https://rhscloud.net/templates/RHSCloud/img/RHSSiteLogoWhite.png"
           },
     
-        "description": "Detection of an attack ",
+        "description": "Detection of an attack",
          "fields": [
       {
         "name": "**Server Provider**",
         "value": "serverguard.cloud",
         "inline": false
       },
-      {
-        "name": "**IP Address**",
-        "value": "Ip",
+            {
+        "name": "**Incoming Packets**",
+        "value": " '$pps' Pps ",
+        "inline": false
+      },
+       {
+        "name": "**check-host**",
+        "value": "https://check-host.net",
         "inline": false
       },
       {
-        "name": "**Incoming Packets**",
-        "value": " '$pps' Pps ",
+        "name": "**Servers IP Address**",
+        "value": "154.12.232.30",
         "inline": false
       }
     ]
@@ -85,14 +90,19 @@ while /bin/true; do
         "value": "serverguard.cloud",
         "inline": false
       },
-      {
-        "name": "**IP Address**",
-        "value": "x.x.x.x",
+            {
+        "name": "**Packets**",
+        "value": "'$pps' pps ",
+        "inline": false
+      },
+     {
+        "name": "**check-host**",
+        "value": "https://check-host.net",
         "inline": false
       },
       {
-        "name": "**Packets**",
-        "value": "'$mbps' Mbps ",
+        "name": "**Servers IP Address**",
+        "value": "154.12.232.30",
         "inline": false
       }
     ]
