@@ -44,12 +44,12 @@ while /bin/true; do
          "fields": [
       {
         "name": "**Server Provider**",
-        "value": "RHS",
+        "value": "serverguard.cloud",
         "inline": false
       },
       {
         "name": "**IP Address**",
-        "value": "x.x.x.x",
+        "value": "Ip",
         "inline": false
       },
       {
@@ -82,7 +82,7 @@ while /bin/true; do
          "fields": [
       {
         "name": "**Server Provider**",
-        "value": "RHS",
+        "value": "serverguard.cloud",
         "inline": false
       },
       {
