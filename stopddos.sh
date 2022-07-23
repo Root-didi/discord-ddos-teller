@@ -21,10 +21,10 @@ while /bin/true; do
 
 
   echo -ne "\r$pps packets/s\033[0K"
-  tcpdump -n -s0 -c 800 -w $dumpdir/capture.`date +"%Y%m%d-%H%M%S"`.pcap
+  tcpdump -n -s0 -c 200 -w $dumpdir/capture.`date +"%Y%m%d-%H%M%S"`.pcap
   echo "`date` Detecting Attack Packets."
   sleep 1
-  if [ $pps -gt 2000 ]; then ## Attack alert will display after incoming traffic reach 30000 PPS
+  if [ $pps -gt 100 ]; then ## Attack alert will display after incoming traffic reach 30000 PPS
     echo " Attack Detected Monitoring Incoming Traffic"
     curl -H "Content-Type: application/json" -X POST -d '{
       "embeds": [{
@@ -44,7 +44,7 @@ while /bin/true; do
          "fields": [
       {
         "name": "**Server Provider**",
-        "value": "serverguard.cloud",
+        "value": "rhscloud.net",
         "inline": false
       },
             {
@@ -59,7 +59,7 @@ while /bin/true; do
       },
       {
         "name": "**Servers IP Address**",
-        "value": "154.12.232.30",
+        "value": "xxxxxx",
         "inline": false
       }
     ]
@@ -87,7 +87,7 @@ while /bin/true; do
          "fields": [
       {
         "name": "**Server Provider**",
-        "value": "serverguard.cloud",
+        "value": "rhscloud.net",
         "inline": false
       },
             {
@@ -102,7 +102,7 @@ while /bin/true; do
       },
       {
         "name": "**Servers IP Address**",
-        "value": "154.12.232.30",
+        "value": "xxxxxxxx",
         "inline": false
       }
     ]
